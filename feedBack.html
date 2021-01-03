@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="feed.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="all.js"></script>
+    
+  </head>
+  <body  >
+  
+      <nav>
+      <div class="menu-icon">
+<span class="fas fa-bars"></span></div>
+<div class="logo">
+<mark>RELAX</mark></div>
+<div class="nav-items">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="produc.html">products</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+</div>
+<div class="search-icon">
+<span class="fas fa-search"></span></div>
+<div class="cancel-icon">
+<span class="fas fa-times"></span></div>
+<form action="#">
+        <input type="search" class="search-data" placeholder="Search" required>
+        <button type="submit" class="fas fa-search"></button>
+      </form>
+</nav>
+    
+      <div class="container">
+        <div class="post">
+          <div class="text">
+  Thanks for rating us!</div>
+  
+  </div>
+  <div class="star-widget">
+          <input type="radio" name="rate" id="rate-5">
+          <label for="rate-5" class="fas fa-cloud"></label>
+          <input type="radio" name="rate" id="rate-4">
+          <label for="rate-4" class="fas fa-cloud"></label>
+          <input type="radio" name="rate" id="rate-3">
+          <label for="rate-3" class="fas fa-cloud"></label>
+          <input type="radio" name="rate" id="rate-2">
+          <label for="rate-2" class="fas fa-cloud"></label>
+          <input type="radio" name="rate" id="rate-1">
+          <label for="rate-1" class="fas fa-cloud"></label>
+          <form action="#">
+            <header></header>
+            <div class="textarea">
+              <textare cols="30" placeholder="Describe your experience.."></textare> 
+  <!-- Due to more textarea tags I got a problem So I've changed the textarea tag to textare. Please correct it. -->
+            
+            <br />
+  <div class="btn">
+  <button type="submit">Post</button>
+            </div>
+            <script>
+              const btn = document.querySelector("button");
+              const post = document.querySelector(".post");
+              const widget = document.querySelector(".star-widget");
+              const editBtn = document.querySelector(".edit");
+              btn.onclick = ()=>{
+                widget.style.display = "none";
+                post.style.display = "block";
+                editBtn.onclick = ()=>{
+                  widget.style.display = "block";
+                  post.style.display = "none";
+                }
+                return false;
+              }
+            </script>
+
+    
+
+
+
+  </body>
+</html>

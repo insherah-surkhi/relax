@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+   <div id="d1" style="font-size:xx-large;margin: 20PX;">
+    
+      <input id="t" type="text" ><input type="button" value="viceversa"onclick = "versa(t.value)">
+   
+   </div>
+   <div id="d2" style="font-size:xx-large;margin: 20PX;color: blue;">
+    
+
+   
+</div>
+   
+
+
+<script>
+   
+  function versa(y){ 
+   var sentance = y;
+//d1.innerHTML=sentance;
+
+var verssa=[];
+//console.log(sentance.length);
+for (let i =sentance.length ; i >=0; i--) {
+    
+   if(sentance[i]==" "||i==0||i==sentance.length){
+      verssa.push(i); 
+      }
+  } 
+console.log(verssa);
+
+
+
+var arr="";
+for (let index = 0; index < verssa.length; index++) {
+    
+    console.log(sentance.slice(verssa[index+1],verssa[index]));
+   arr+=" "+sentance.slice(verssa[index+1],verssa[index]);
+   } 
+  d2.innerHTML=arr; 
+}
+  versa();
+</script>
+
+
+</body>
+</html>

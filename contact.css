@@ -1,0 +1,53 @@
+div.parent{
+        
+    margin-top:60px ;
+    margin-left:100px ;
+    margin-right:800px;
+    padding: 80px 100px ;
+    
+    
+}
+.subParent{
+    
+    margin-top:-50px ;
+    size:100%;
+
+   }
+
+div.subParent div{ 
+    padding: 30px 60px;
+    margin-left:-70px ;
+    margin-bottom: 10px;
+    border:0.5px solid black;
+display: block;}
+    
+
+ 
+ 
+.fas{font-size: 40px;
+text-align: left;
+margin-left:-35px ;
+margin-top:0px;
+display: inline-block;
+}
+div.input{
+    display:inline-block;
+    margin-left:5px;
+    padding: 10px 60px;
+    font-size:60px ;
+    text-align: left;
+    
+}
+#t{background:none ;
+    display: block;
+border: none;}
+
+#butDiv{
+text-align:left;
+font-size: 30px;
+border: none;margin-left:-128px;
+}
+
+
+
+
