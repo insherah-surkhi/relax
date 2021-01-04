@@ -41,13 +41,51 @@ where OrderID <=10400 order by ShipperID desc
   where OrderID <=10400 order by ShipperID desc"
   value="sql H.W3"onmouseover="mouseOver(this.name)" onmouseout="mouseOut()">
 
+  <div id="d" style="font-size: xx-large;color: blue;"></div>
+
+  <div style="padding:20px;"></div>
+
  
+<button class="btn btn-warning" onclick="myFunction()">sql H.W Garage results</button>
 
- <div id="d" style="font-size: xx-large;color: blue;"></div>
 
- <script>
- 
+<div id="myDIV"style ="background:none;padding:60px;border:1px solid black;margin:100px;display:none" >
+1) select *from [cars ] order by sort desc ;
+{ 1 volvo 1990 ,5 toyota 2009 ,3 hunday 2000 ,4 honda 2018 ,2 bmw 1997 }
 
+<br><br>
+
+2)select Tel from [customer] where address = 'paris' or 'u.s' ;
+{ 02-64587 , 02-456456 , 67-458745  }
+<br><br>
+
+3)select customerID, carID ,fixID from [services-orders ]
+order by #FixTimes  asc;
+{1 2 4 , 2 3 1, 3 1 3, 5 1 3, 7 6 2, 5 4 5 }
+
+<br><br>
+4)select  workerName from [  fix-car-parts ] where price$ <=150;
+{Adam A. ,Aameer }
+<br><br>
+5)select * from[cars]  where carsID >=4;
+{4 honda 2018 , 5  toyota 2009 }
+<br><br>
+
+
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+  
 function mouseOver(t) {
   d.innerHTML = t;
 }
