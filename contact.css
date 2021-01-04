@@ -24,22 +24,17 @@ display: block;}
 
  
  
-.fas{font-size: 40px;
+.fas{font-size: 20px;
 text-align: left;
 margin-left:-35px ;
 margin-top:0px;
 display: inline-block;
 }
-div.input{
-    display:inline-block;
-    margin-left:5px;
-    padding: 10px 60px;
-    font-size:60px ;
-    text-align: left;
+
     
-}
-#t{background:none ;
-    display: block;
+
+.t{background:none ;
+    display:inline;
 border: none;}
 
 #butDiv{

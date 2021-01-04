@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body  >
   
@@ -18,7 +19,7 @@
 <mark>RELAX</mark></div>
 <div class="nav-items">
 <li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
+<li><a href="neonText.html">Videos</a></li>
 <li><a href="images.html">products</a></li>
 <li><a href="contact.html">Contact</a></li>
 <li><a href="feedback.html">Feedback</a></li>
@@ -39,29 +40,32 @@
 <div class="parent" style="display: block;"> <!--nesting-->
   <div class="subParent" >
   <div >
-    <i class="fas fa-address-book" ></i>  FUll Name:   <input id="t" name="yourName" placeholder="  --------------------------------------">
+    <label class="fas fa-address-book" >  FUll Name: <input class="t" name="yourName" placeholder="  --------------------------------------"></label>
     
   </div>
 
    <div>
-    <i class="fas fa-phone-square"></i>    Your Phone/Email:  <input id="t"  name="yourPhone" placeholder="  --------------------------------------">
+    <label class="fas fa-phone-square">  Phone/Email: <input class="t"  name="yourPhone" placeholder="  --------------------------------------"></label>
     
    </div>
 
    <div>
-    <i class="fas fa-envelope-square"></i>  Write Message:   <input id="t"  name="yourMessage" placeholder="  -------------------------------------">
+    <label class="fas fa-envelope-square"> Write Message: <input class="t"  name="yourMessage" placeholder="  -------------------------------------"></label>
    
    </div>
-  <div id ="butDiv" ><span class="w3-tag w3-teal"onclick= "myNote()">SUBMIT</span></div>
+  <div id ="hide">SUBMIT</div>
 </div>
 </div>
   <script>
- function myNote(){
-  // console.log(parent.innerHTML);
-  parent.childhood.style.display="none";
-  parent.innerHTML="THANK YOU , WE WILL BE IN CONTACT SOON ";
-} 
-   myNote();
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("subParent.childhood").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+  //parent.innerHTML="THANK YOU , WE WILL BE IN CONTACT SOON ";
 
 
 
