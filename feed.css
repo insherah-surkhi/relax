@@ -16,7 +16,7 @@
   }
   .container .text{
     font-size: 25px;
-    color: #666;
+    color: rgb(230, 198, 198);
     font-weight: 500;
   }
   .container .edit{
@@ -36,17 +36,17 @@
   }
   .star-widget label{
     font-size: 40px;
-    color: rgb(146, 94, 94);
+    color: rgb(41, 238, 238);
     padding: 10px;
     float: right;
     transition: all 0.2s ease;
   }
   input:not(:checked) ~ label:hover,
   input:not(:checked) ~ label:hover ~ label{
-    color: rgb(228, 131, 92);
+    color: rgb(21, 79, 206);
   }
   input:checked ~ label{
-    color: rgb(100, 214, 33);
+    color: rgb(252, 255, 49);
   }
   input#rate-5:checked ~ label{
     color: #fe7;
@@ -76,7 +76,7 @@
     height: 100%;
     width: 100%;
     outline: none;
-    color: #eee;
+    color: rgb(30, 255, 255);
     border: 1px solid #333;
     background: #222;
     padding: 10px;
@@ -94,10 +94,10 @@
   form .btn button{
     height: 100%;
     width: 100%;
-    border: 1px solid #444;
+    border: 1px solid rgb(26, 63, 61);
     outline: none;
     
-    color: #999;
+    color: rgb(104, 174, 196);
     font-size: 17px;
     font-weight: 500;
     text-transform: uppercase;
