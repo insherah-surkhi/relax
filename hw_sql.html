@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p{ background-color: rgb(214, 214, 111);font-size: medium;padding: 50px;}
+    </style> 
+</head>
+<body>
+    <p>1) SELECT  Customers.CustomerName ,sum(Quantity)
+        FROM customers
+        INNER JOIN orders ON Orders.CustomerID=Customers.CustomerID
+        INNER JOIN OrderDetails ON Orders.OrderID=OrderDetails.OrderID
+        
+        group by CustomerName
+        </p>
+        <h4>Result: Number of Records: 74</h4><br>
+
+
+   <p>2) SELECT products.ProductName, OrderDetails.Quantity 
+    FROM OrderDetails
+    INNER JOIN products ON products.ProductID=OrderDetails.ProductID
+    
+    group by ProductName</p>
+    <h4>Result: Number of Records: 77</h4><br>
+
+
+
+    <p>3) SELECT Employees.LastName ,Employees.FirstName ,Orders.OrderID ,Orders.CustomerID ,Orders.OrderDate ,Orders.ShipperID from orders
+        inner join employees on Employees.EmployeeID=Orders.EmployeeID</p>
+        <h4>Result: Number of Records: 196</h4><br>
+
+
+
+     <p>4) SELECT Customers.CustomerName, Employees.LastName ,Employees.FirstName ,Orders.OrderID ,Orders.CustomerID ,Orders.OrderDate ,Orders.ShipperID from orders
+        inner join employees on Employees.EmployeeID=Orders.EmployeeID
+        inner join customers on customers.CustomerID=Orders.CustomerID</p>   
+        <h4>Result: Number of Records: 196</h4>
+
+
+
+     <p>5) SELECT Customers.CustomerName, Employees.LastName ,Employees.FirstName ,Shippers.ShipperName ,Orders.OrderID ,Orders.CustomerID ,Orders.OrderDate ,Orders.ShipperID from orders
+        inner join employees on Employees.EmployeeID=Orders.EmployeeID
+        inner join customers on customers.CustomerID=Orders.CustomerID
+        inner join Shippers on Shippers.ShipperID=Orders.ShipperID
+        </p>   
+       <h4>Result: Number of Records: 196</h4><br>
+       
+
+
+       <p>6) select Customers.Country ,sum(OrderDetails.Quantity)*Products.Price from orderdetails
+        inner join Customers on Orders.CustomerID=Customers.CustomerID
+        inner join Orders on OrderDetails.OrderID=Orders.OrderID
+        inner join Products  on  OrderDetails.productID=Products.productID
+        group by country</p>
+        <h6>Country....	sum(OrderDetails.Quantity)*Products.Price<br>
+            Argentina...558<br>
+            Austria...29735<br>
+            Belgium...14985<br>
+            Brazil...25970.25<br>
+            Canada...48250<br>
+            Denmark...887.5<br>
+            Finland...5649<br>
+            France...18669<br>
+            Germany...37076<br>
+            Ireland...10735<br>
+            Italy...994.5<br>
+            Mexico...2290<br>
+            Norway...216<br>
+            Poland...562.5<br>
+            Portugal...8965<br>
+            Spain...2217.2<br>
+            Sweden...7581<br>
+            Switzerland...1404<br>
+            UK...6980<br>
+            USA...20641.350000000002<br>
+            Venezuela...21598.8</h6><br>
+
+            
+          <p>7) select Products.productname ,sum(OrderDetails.Quantity)*Products.Price from orderdetails
+                 inner join Orders on OrderDetails.OrderID=Orders.OrderID
+                 inner join Products  on  OrderDetails.productID=Products.productID
+                  group by productname</p>
+            <h4>Number of Records: 77<br>
+                ProductName	..sum(OrderDetails.Quantity)*Products.Price<br>
+                Alice Mutton...12909<br>
+                Aniseed Syrup..800<br>
+                Boston Crab Meat...4710.4<br>
+                Camembert Pierrot...14620<br>
+                Carnarvon Tigers...6625<br>
+                Chais...2862.........</h4>
+
+
+     <p>8)SELECT Shippers.ShipperName,sum(OrderDetails.Quantity) FROM Shippers
+
+inner join Orders on Shippers.ShipperID=Orders.ShipperID
+inner join OrderDetails on Orders.OrderID=OrderDetails.OrderID
+group by ShipperName </p>  
+<h4>Result:
+    Number of Records: 3<br>
+    ShipperName	.....sum(OrderDetails.Quantity)<br>
+    Federal Shipping...	4366<br>
+    Speedy Express...3575<br>
+    United Package...4802</h4><br>
+
+
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
